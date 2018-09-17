@@ -5,12 +5,16 @@ import java.util.ArrayList;
 public class Principal {
     pulic static void main (String args[]) {
         ArrayList<Persona> personas = new ArrayList<Persona>();
-        personas.add(new Persona(29180796, "Andres", "Tomas"));
 
-        personas.get(0).anyadir(new Telefono("Movil",625969943));
-        personas.get(0).anyadir(new Telefono("Trabajo", 963782039));
+        Persona yo = new Persona(21005748,"Carlos","Canut");
+        personas.add(yo);
 
-        Persona p = buscar(personas,"Andres");
+        yo.anyadir(new Telefono("Movil", 684521457));
+        yo.anyadir(new Telefono("Trabajo", 963254512));
+
+        //buscar una persona dado un nombre
+        Persona p = buscar(personas,"Carlos");
+        //Mostrar todos los telefonos de una persona
         p.mostrarTelefonos();
     }
 
