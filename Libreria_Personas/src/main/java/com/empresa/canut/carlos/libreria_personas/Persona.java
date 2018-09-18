@@ -4,19 +4,50 @@ package com.empresa.canut.carlos.libreria_personas;
 import java.util.ArrayList;
 
 public class Persona {
-    private String dni;
+    private int dni;
     private String nombre;
+    private String apellido;
+    private String nacionalidad;
+    private ArrayList<Telefono> telefonos = new ArrayList<>();
+    private int edad;
+    private String sexo;
 
-    public String getDni() {
+
+
+    public Persona(int dni,String Nombre, String Apellido){
+        this.dni = dni;
+        this.nombre = Nombre;
+        this.apellido = Apellido;
+    }
+
+
+    public void anyadir(Telefono P1) {
+        this.telefonos.add(P1);
+    }
+
+
+    public void mostrarTelefonos(){
+        for(int i = 0; i<this.telefonos.size();i++){
+            System.out.println(this.telefonos.get(i));
+        }
+    }
+
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
-    private int edad;
-    private String sexo;
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -50,15 +81,14 @@ public class Persona {
         this.nacionalidad = nacionalidad;
     }
 
-    public ArrayList<telefono> getTelefonos() {
+    public ArrayList<Telefono> getTelefonos() {
         return telefonos;
     }
 
-    public void setTelefonos(ArrayList<telefono> telefonos) {
+    public void setTelefonos(ArrayList<Telefono> telefonos) {
         this.telefonos = telefonos;
     }
 
-    private String nacionalidad;
-    private ArrayList<telefono> telefonos = new ArrayList<>();
+
 
 }

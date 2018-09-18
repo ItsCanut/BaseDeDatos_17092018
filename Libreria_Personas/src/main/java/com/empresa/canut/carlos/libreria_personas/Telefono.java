@@ -1,15 +1,21 @@
 package com.empresa.canut.carlos.libreria_personas;
 
 public class Telefono {
-    private String dni;
+    private int dni;
     private int numero;
     private String descripcion;
 
-    public String getDni() {
+    public Telefono(int dni,int numero, String descripcion){
+        this.dni = dni;
+        this.numero = numero;
+        this.descripcion = descripcion;
+    }
+
+    public int getDni() {
         return dni;
     }
 
-    public void setDni(String dni) {
+    public void setDni(int dni) {
         this.dni = dni;
     }
 
