@@ -19,6 +19,6 @@ public class Principal {
     }
 
     public static Persona buscar(ArrayList<Persona> personas, String nombre){
-
+        
     }
 }
